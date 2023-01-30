@@ -4,7 +4,7 @@ const path = require('express')
 const PORT = 3000
 
 const fs = require('fs')
-const notes = reqire('./db/db.json')
+const notes = require('./db/db.json')
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
