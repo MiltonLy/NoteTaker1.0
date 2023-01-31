@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const path = require('path')
-const PORT = porcess.env.PORT || 3000
+const PORT = process.env.PORT || 3000
 
 const fs = require('fs')
 const notes = require('./db/db.json')
@@ -10,7 +10,8 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.static('public'))
 
-app.get('/app/notes', (req, res) => {
+
+app.get('/api/notes', (req, res) => {
     res.json(notes.slice(1))
 })
 
